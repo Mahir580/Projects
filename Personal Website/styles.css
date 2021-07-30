@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#hi a:hover {
+    -webkit-text-fill-color: crimson;
+    -webkit-background-clip: content-box;
+    font-size: 17px;
+}
+
+body {
+    background-image: url(./img/luxury-black-background-banner-illustration-with-gold-strip-art-deco-backdrop_25989-206.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.container-1 {
+    min-height: 90vh;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    text-shadow: 2px 2px 5px black;
+}
+
+span {
+    position: relative;
+}
+
+span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: crimson;
+    -webkit-text-stroke: 0vw gray;
+    border-right: 2px solid crimson;
+    overflow: hidden;
+    animation: slide 6s linear infinite;
+}
+
+@keyframes slide {
+    10%,
+    100% {
+        width: 0;
+    }
+    50%,
+    70% {
+        width: 100%;
+    }
+}

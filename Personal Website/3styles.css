@@ -1,0 +1,19 @@
+body {
+    background-image: url(./img/black-modern-abstract-background-with-hexagon-carbon-fiber-grid-light-lines_156943-277.jpg);
+    background-size: cover;
+    color: white;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+center {
+    text-shadow: 2px 2px 3px rgb(2, 2, 2);
+}
+
+input {
+    padding: 5px;
+    border-radius: 15px;
+}

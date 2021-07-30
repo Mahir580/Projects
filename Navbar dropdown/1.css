@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* color: white; */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+nav {
+    background-color: rgb(20, 20, 20);
+}
+
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 140px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    background-color: rgb(20, 20, 20);
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(25, 25, 25);
+    box-shadow: 0 0 15px cyan;
+    border-radius: 5px;
+    color: cyan;
+    transition: 0.4s;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 2px cyan solid;
+}
+
+nav ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 130px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 130px;
+}
+
+nav .container {
+    float: left;
+    color: white;
+    margin: 15px 40px;
+    font-weight: 400;
+    font-size: 30px;
+}
