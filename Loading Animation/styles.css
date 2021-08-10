@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(4, 0, 17);
+    animation: bg 5s linear infinite;
+}
+
+@keyframes bg {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loading {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to top, rgb(4, 0, 17) 40%, cyan);
+    border-radius: 50%;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(4, 0, 17);
+    inset: 20px 20px 0 0;
+    border-radius: 50%;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    width: 40px;
+    height: 40px;
+    background-color: cyan;
+    border-radius: 50%;
+    box-shadow: 0 0 40px cyan;
+}
