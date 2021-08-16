@@ -30,6 +30,8 @@
     background: none;
 }
 
+.nav-links {}
+
 .nav-links ul {
     display: flex;
     margin-left: 30px;
